@@ -1,0 +1,68 @@
+body {
+  text-align: center;
+  background-color: beige;
+}
+#app {
+  position: relative;
+  height: 100vh;
+}
+img {
+  width: 200px;
+}
+.omikuji {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.loading {
+  display: none;
+  position: fixed;
+  top:0;
+  left: 0;
+  width:100vw;
+  height: 83vh;
+  z-index: 100;
+  background-color: beige;
+}
+.active {
+  display: grid;
+  place-items: center;
+  animation: 3s kieru;
+  animation-fill-mode: forwards;
+}
+.rotate {
+  animation: 2s rotation;
+  animation-fill-mode: forwards;
+}
+button {
+  font-size: 20px;
+  margin-top: 83vh;
+  background-color: rgb(248, 80, 80);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+}
+button:hover {
+  background-color: rgb(210, 60, 60);
+}
+button:active {
+  background-color: rgb(210, 60, 60);
+}
+@keyframes rotation{
+  0%{ transform:rotate(0);}
+  60%{ transform:rotate(-155deg); }
+  70%{ margin:0; }
+  75%{ margin-top: 60px;margin-right: 40px;}
+  85%{ margin:0; }
+  90%{ margin-top: 60px;margin-right: 40px;}
+  100%{ margin: 20px; transform:rotate(-155deg);}
+}
+@keyframes kieru {
+  0%{ opacity: 1;}
+  90%{opacity: 1;}
+  95%{opacity: 0.5;}
+  100%{opacity: 0; display: none;}
+}

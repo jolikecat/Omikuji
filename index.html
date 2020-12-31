@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="img/omikuji.png" />
+  <meta property="og:description" content="Vue.jsで作ったおみくじです。" />
+  <title>おみくじ</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <img class="omikuji" v-bind:src="src" alt="おみくじ">
+    <div>
+      <button id="btn" v-on:click="omikuji">{{ text }}</button>
+    </div>
+    <div class="loading" v-bind:class="{ active: isActive }">
+      <img src="img/omikuji.png" class="rotate">
+    </div>
+  </div>
+<!-- Vue -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<!-- Lodash -->
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+<!-- JS -->
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
